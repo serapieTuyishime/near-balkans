@@ -27,7 +27,7 @@ export default function Home() {
                     </span>{" "}
                     Certified!
                 </h1>
-                <p class="pt-5 lg:pt-8 pb-24 lg:text-xl text-lg text-dark lg:px-40 ">
+                <p className="pt-5 lg:pt-8 pb-24 lg:text-xl text-lg text-dark lg:px-40 ">
                     We, in NEAR Balkans, know how important it is to have
                     regional and local support. Now you can become NEAR
                     certified in a regional language of preference and connect
@@ -56,14 +56,14 @@ export default function Home() {
                 Making your NEAR learning easy.
             </div>
             <div className="flex flex-col lg:flex-row lg:pt-28 lg:px-36 gap-8 lg:gap-16 lg:justify-between lg:pb-6  relative container mx-auto">
-                <div class="bg-fullRadial h-[30rem] w-full max-w-[30rem] opacity-[0.4] absolute top-0 -z-10 right-16 hidden lg:block"></div>
+                <div className="bg-fullRadial h-[30rem] w-full max-w-[30rem] opacity-[0.4] absolute top-0 -z-10 right-16 hidden lg:block"></div>
                 <div className="w-full lg:w-2/5 grid gap-2 content-center justify-items-center lg:justify-items-start text-center  lg:text-left order-last lg:order-none px-8 lg:pl-2">
                     <label className="text-2xl lg:text-4xl font-medium capitalize text-dark">
                         Open NEAR Wallet
                     </label>
                     <span
                         id="#learning"
-                        class="text-dark mb-6 lg:text-lg lg:leading-5"
+                        className="text-dark mb-6 lg:text-lg lg:leading-5"
                     >
                         Opening a NEAR wallet is the first step and an essential
                         part of joining the NEAR community as well as starting
@@ -99,7 +99,7 @@ export default function Home() {
                 </svg>
             </div>
             <div className="module  flex flex-col lg:justify-between lg:flex-row sm:px-32 py-18 lg:py-6 gap-8 lg:gap-0  relative container mx-auto ">
-                <div class="bg-greenRadial opacity-[0.4] top-0 left-0 absolute h-[30rem] w-[30rem] -z-10 hidden lg:block"></div>
+                <div className="bg-greenRadial opacity-[0.4] top-0 left-0 absolute h-[30rem] w-[30rem] -z-10 hidden lg:block"></div>
                 <div className="w-full lg:w-2/5  ">
                     <Image
                         src="/target.png"
@@ -145,10 +145,10 @@ export default function Home() {
                 </svg>
             </div>
             <div className="container mx-auto text-dark grid gap-2 lg:gap-0 content-center px-4 lg:px-0 text-center">
-                <label className="text-2xl lg:text-4xl font-medium capitalize">
+                <label className="text-2xl  font-medium capitalize">
                     Claim NEAR certificate
                 </label>
-                <label className="text-lg lg:w-1/3 mx-auto lg:leading-6">
+                <label className="text-lg lg:text-4xl lg:w-1/3 mx-auto lg:leading-6">
                     Upon course completion, receive the NEAR dev 101 certificate
                     as an NFT on your NEAR wallet.
                 </label>
@@ -161,9 +161,9 @@ export default function Home() {
                 />
             </div>
             <div className=" get-started  flex flex-col lg:flex-row sm:px-32 gap-2 sm:pt-4 pt-36 relative">
-                <div class="bg-fullgreenRadial rotate-180 opacity-[0.4]  left-0 absolute h-full w-full -z-10 hidden lg:block"></div>
+                <div className="bg-fullgreenRadial rotate-180 opacity-[0.4]  left-0 absolute h-full w-full -z-10 hidden lg:block"></div>
                 <div className="w-full lg:w-2/5 grid gap-5 content-center justify-items-center text-center order-last lg:order-none px-8 lg:pl-2">
-                    <label className="text-2xl font-medium capitalize text-dark">
+                    <label className="text-2xl lg:text-3xl font-medium capitalize text-dark">
                         NEAR development 101
                     </label>
                     <Button text="Start the course" shadowed />

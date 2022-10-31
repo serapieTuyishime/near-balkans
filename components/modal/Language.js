@@ -8,7 +8,7 @@ export default function Language({ text = "Croatian" }) {
                     height="14"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
-                    class="text-center mx-auto"
+                    className="text-center mx-auto"
                 >
                     <path
                         fill-rule="evenodd"
