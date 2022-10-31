@@ -4,6 +4,7 @@ import Button from "../components/General/Button";
 import Modal from "../components/General/Modal";
 import Module from "../components/home/Module";
 import { useState } from "react";
+import Link from "next/link";
 
 export default function Home() {
     const [ismodalOpen, setModalState] = useState(false);
@@ -13,14 +14,12 @@ export default function Home() {
     }
     return (
         <>
-            {ismodalOpen && (
-                <Modal />
-            )}
-            <div className="h-56 w-screen grid grid-cols-2 px-8 gap-8 lg:opacity-0">
+            {ismodalOpen && <Modal />}
+            <div className="h-56 w-screen grid grid-cols-2 px-8 gap-8 lg:opacity-0 container">
                 <div className="bg-purpleRadial bg-opacity-10"></div>
                 <div className="bg-purpleRadial bg-opacity-10"></div>
             </div>
-            <div className="pb-32 pt-3 grid text-center justify-items-center content-center px-4">
+            <div className="pb-32 pt-3 grid text-center justify-items-center content-center container mx-auto px-4">
                 <h1 className="px-18 text-4xl lg:text-7xl  capitalize font-medium  text-dark leading-snug w-full">
                     Get{" "}
                     <span className="bg-gradient-to-b from-purple-300 via-blue-300 to-green-400 bg-clip-text text-transparent ">
@@ -35,7 +34,7 @@ export default function Home() {
                     with our team to support your further growth within the NEAR
                     ecosystem.
                 </p>
-                <div className="max-w-max ">
+                <Link href="#learning" className="max-w-max ">
                     <svg
                         width="28"
                         height="28"
@@ -51,18 +50,21 @@ export default function Home() {
                             opacity="0.3"
                         ></path>
                     </svg>
-                </div>
+                </Link>
             </div>
-            <div className="pt-28 lg:pt-0 font-dark text-center font-medium text-3xl lg:text-5xl w-3/5 lg:w-2/5 mx-auto leading-7 pb-14 text-dark">
+            <div className="pt-28 lg:pt-0 font-dark text-center font-medium text-3xl lg:text-5xl w-3/5 lg:w-2/5 leading-7 pb-14 text-dark container mx-auto">
                 Making your NEAR learning easy.
             </div>
-            <div className="flex flex-col lg:flex-row lg:pt-28 lg:px-36 gap-8 lg:gap-16 lg:justify-between lg:pb-6  relative">
+            <div className="flex flex-col lg:flex-row lg:pt-28 lg:px-36 gap-8 lg:gap-16 lg:justify-between lg:pb-6  relative container mx-auto">
                 <div class="bg-fullRadial h-[30rem] w-full max-w-[30rem] opacity-[0.4] absolute top-0 -z-10 right-16 hidden lg:block"></div>
-                <div className="w-full  lg:w-2/5 grid gap-2 content-center justify-items-center lg:justify-items-start text-center  lg:text-left order-last lg:order-none px-8 lg:pl-2">
+                <div className="w-full lg:w-2/5 grid gap-2 content-center justify-items-center lg:justify-items-start text-center  lg:text-left order-last lg:order-none px-8 lg:pl-2">
                     <label className="text-2xl lg:text-4xl font-medium capitalize text-dark">
                         Open NEAR Wallet
                     </label>
-                    <span class="text-dark mb-6 lg:text-lg lg:leading-5">
+                    <span
+                        id="#learning"
+                        class="text-dark mb-6 lg:text-lg lg:leading-5"
+                    >
                         Opening a NEAR wallet is the first step and an essential
                         part of joining the NEAR community as well as starting
                         this course.
@@ -96,7 +98,7 @@ export default function Home() {
                     ></path>
                 </svg>
             </div>
-            <div className="module  flex flex-col lg:justify-between lg:flex-row sm:px-32 py-18 lg:py-6 gap-8 lg:gap-0  relative ">
+            <div className="module  flex flex-col lg:justify-between lg:flex-row sm:px-32 py-18 lg:py-6 gap-8 lg:gap-0  relative container mx-auto ">
                 <div class="bg-greenRadial opacity-[0.4] top-0 left-0 absolute h-[30rem] w-[30rem] -z-10 hidden lg:block"></div>
                 <div className="w-full lg:w-2/5  ">
                     <Image
@@ -142,7 +144,7 @@ export default function Home() {
                     ></path>
                 </svg>
             </div>
-            <div className=" text-dark grid gap-2 lg:gap-0 content-center px-4 lg:px-0 text-center">
+            <div className="container mx-auto text-dark grid gap-2 lg:gap-0 content-center px-4 lg:px-0 text-center">
                 <label className="text-2xl lg:text-4xl font-medium capitalize">
                     Claim NEAR certificate
                 </label>
@@ -158,13 +160,13 @@ export default function Home() {
                     height={1000}
                 />
             </div>
-            <div className="get-started  flex flex-col lg:flex-row sm:px-32 gap-2 sm:pt-4 pt-36 relative">
+            <div className=" get-started  flex flex-col lg:flex-row sm:px-32 gap-2 sm:pt-4 pt-36 relative">
                 <div class="bg-fullgreenRadial rotate-180 opacity-[0.4]  left-0 absolute h-full w-full -z-10 hidden lg:block"></div>
                 <div className="w-full lg:w-2/5 grid gap-5 content-center justify-items-center text-center order-last lg:order-none px-8 lg:pl-2">
                     <label className="text-2xl font-medium capitalize text-dark">
                         NEAR development 101
                     </label>
-                    <Button text="Start the course" />
+                    <Button text="Start the course" shadowed />
                 </div>
                 <div className="w-full lg:w-3/5 lg:h-96 ">
                     <Image
@@ -172,7 +174,7 @@ export default function Home() {
                         height={100}
                         width={100}
                         alt="Logo image"
-                        className="object-contain lg:object-cover h-44 lg:h-full lg:w-3/5 w-44 mx-auto z-5"
+                        className="object-contain lg:object-cover 2xl:object-contain h-44 lg:h-full lg:w-3/5 w-44 mx-auto z-5"
                     />
                 </div>
             </div>

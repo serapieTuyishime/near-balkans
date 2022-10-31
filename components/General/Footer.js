@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function Footer() {
     return (
-        <div className="py-24 px-6 grid gap-8 justify-items-center text-center lg:px-52">
+        <div className="py-24 px-6 grid gap-8 justify-items-center text-center lg:px-52 container mx-auto">
             <h4 className="text-lg">
                 Visit
                 <Link
