@@ -1,12 +1,21 @@
 import Head from "next/head";
 import Image from "next/image";
 import Button from "../components/General/Button";
+import Modal from "../components/General/Modal";
 import Module from "../components/home/Module";
-import styles from "../styles/Home.module.css";
+import { useState } from "react";
 
 export default function Home() {
+    const [ismodalOpen, setModalState] = useState(false);
+
+    function closeHandler() {
+        setModalState(true);
+    }
     return (
         <>
+            {ismodalOpen && (
+                <Modal />
+            )}
             <div className="h-56 w-screen grid grid-cols-2 px-8 gap-8 lg:opacity-0">
                 <div className="bg-purpleRadial bg-opacity-10"></div>
                 <div className="bg-purpleRadial bg-opacity-10"></div>
@@ -87,7 +96,8 @@ export default function Home() {
                     ></path>
                 </svg>
             </div>
-            <div className="module  flex flex-col lg:justify-between lg:flex-row sm:px-32 py-18 lg:py-6 gap-8 lg:gap-0">
+            <div className="module  flex flex-col lg:justify-between lg:flex-row sm:px-32 py-18 lg:py-6 gap-8 lg:gap-0  relative ">
+                <div class="bg-greenRadial opacity-[0.4] top-0 left-0 absolute h-[30rem] w-[30rem] -z-10 hidden lg:block"></div>
                 <div className="w-full lg:w-2/5  ">
                     <Image
                         src="/target.png"
@@ -97,7 +107,7 @@ export default function Home() {
                         className="object-cover h-44  w-44 lg:w-4/5 lg:h-72 mx-auto lg:ml-0"
                     />
                 </div>
-                <div className="w-full lg:w-1/2 grid gap-6 content-center lg:justify-items-start justify-items-center text-center px-8 lg:pl-2  text-dark">
+                <div className="w-full lg:w-1/2 grid gap-6 content-center lg:justify-items-start justify-items-center text-center px-8 lg:pl-2 text-dark">
                     <label className="text-2xl lg:text-4xl font-medium ">
                         Complete the course
                     </label>
@@ -148,20 +158,21 @@ export default function Home() {
                     height={1000}
                 />
             </div>
-            <div className="get-started bg-red-500 flex flex-col lg:flex-row sm:px-32 gap-2 sm:pt-4 pt-36 ">
+            <div className="get-started  flex flex-col lg:flex-row sm:px-32 gap-2 sm:pt-4 pt-36 relative">
+                <div class="bg-fullgreenRadial rotate-180 opacity-[0.4]  left-0 absolute h-full w-full -z-10 hidden lg:block"></div>
                 <div className="w-full lg:w-2/5 grid gap-5 content-center justify-items-center text-center order-last lg:order-none px-8 lg:pl-2">
                     <label className="text-2xl font-medium capitalize text-dark">
                         NEAR development 101
                     </label>
                     <Button text="Start the course" />
                 </div>
-                <div className="w-full lg:w-3/5 lg:h-96 bg-blue-400">
+                <div className="w-full lg:w-3/5 lg:h-96 ">
                     <Image
                         src="/logo2.png"
                         height={100}
                         width={100}
                         alt="Logo image"
-                        className="object-contain lg:object-cover h-44 lg:h-full lg:w-3/5 w-44 mx-auto"
+                        className="object-contain lg:object-cover h-44 lg:h-full lg:w-3/5 w-44 mx-auto z-5"
                     />
                 </div>
             </div>

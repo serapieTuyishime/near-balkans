@@ -31,6 +31,10 @@ module.exports = {
                     "radial-gradient(farthest-side at 50% 0%,#F2EBFF 0,rgba(127,208,231,0) 100%)",
                 fullRadial:
                     "radial-gradient(50% 50% at 50% 50%,#8e9af9 0,rgba(127,208,231,0) 100%)",
+                greenRadial:
+                    "radial-gradient(50% 50% at 50% 50%,#7bdde2 0,rgba(123,221,226,0) 100%)",
+                fullgreenRadial:
+                    "radial-gradient(farthest-side at 50% 0%,#7bdde2 0,rgba(123,221,226,0) 100%)",
             },
         },
     },

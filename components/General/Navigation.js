@@ -1,13 +1,22 @@
 import Head from "next/head";
 import Image from "next/image";
 import Button from "./Button";
+import Modal from "./Modal";
+import { useState } from "react";
 
 export default function Navigation() {
+    const [ismodalOpen, setModalState] = useState(false);
+    function openModal() {
+        setModalState(true);
+    }
     return (
-        <div className="bg-white sticky top-0">
+        <div className="bg-white sticky top-0 z-10">
             <Head>
                 <title>Near balkans</title>
             </Head>
+            
+                <Modal open={ismodalOpen} close={()=>setModalState(false)}/>
+            
             <div>
                 <div className="py-6 px-6 lg:px-26 flex justify-between header">
                     <div className="flex gap-2 items-center">
@@ -61,13 +70,17 @@ export default function Navigation() {
                         />
                     </div>
                     <div className="flex items-center gap-20 ">
-                        <label className="hidden lg:inline-block text-lg ">
+                        <label
+                            className="hidden lg:inline-block text-lg cursor-pointer"
+                            onClick={openModal}
+                        >
                             Start the course
                         </label>
                         <Button text="Create wallet" fill />
                     </div>
                 </div>
             </div>
+
         </div>
     );
 }
